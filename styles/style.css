@@ -24,7 +24,7 @@ ul {
   padding-left: 20px;
 }
 
-.delete-task-link {
+.delete-note-link {
   color: red;
 }
 
@@ -33,7 +33,7 @@ ul {
   padding: 20px;
 }
 
-#tasks-content {
+#notes-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 10px;
