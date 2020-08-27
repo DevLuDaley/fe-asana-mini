@@ -1,7 +1,7 @@
 class TasksAdapter {
   constructor() {
     this.baseUrl = 'http://localhost:3000/api/v1/tasks'
-    console.log('adapter.js is working')
+    console.log('TasksAdapter.js is working')
   }
 
   getTasks() {

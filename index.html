@@ -9,12 +9,22 @@
     <title>Task Manager</title>
 </head>
 <body>
-      <div class="container">
-    <h1>Task Manager</h1>
+    <main>
+      <div class="container page active" id="tasks">
+        <ul>
+            <li><a href="#" data-target="workspaces" class="nav-link">WORKSPACES</a></li>
+            <li><a href="#" data-target="users" class="nav-link">USER</a></li>
+            <li><a href="#" data-target="projects" class="nav-link">PROJECTS</a></li>
+            <li><a href="#" data-target="tasks" class="nav-link">TASKS</a></li>
+            <li><a href="#" data-target="subtasks" class="nav-link">SUBTASKS</a></li>
+            <li><a href="#" data-target="notes" class="nav-link">NOTES</a></li>
+        </ul>        
+        <h1>Tasks</h1>
+
     <div id="new-task-container">
       <form id="new-task-form">
         <input type="text" name="task-body" id="task-note-body">
-        <input type="submit" value="Save task">
+        <input type="submit" value="save task">
       </form>
     </div>
     <div id="task-content">
@@ -27,9 +37,39 @@
     </div>
   </div>
   </div>
+          <div class="container page " id="projects">
+        <ul>
+            <li><a href="#" data-target="workspaces" class="nav-link">WORKSPACES</a></li>
+            <li><a href="#" data-target="users" class="nav-link">USER</a></li>
+            <li><a href="#" data-target="projects" class="nav-link">PROJECTS</a></li>
+            <li><a href="#" data-target="tasks" class="nav-link">TASKS</a></li>
+            <li><a href="#" data-target="subtasks" class="nav-link">SUBTASKS</a></li>
+            <li><a href="#" data-target="notes" class="nav-link">NOTES</a></li>
+        </ul>
+    <h1>Projects</h1>
+    <div id="new-project-container">
+      <form id="new-project-form">
+        <input type="text" name="project-body" id="project-note-body">
+        <input type="submit" value="save project">
+      </form>
+    </div>
+    <div id="project-content">
+      <ul id="projects-container">
+
+      </ul>
+      <div id="project-show">
+
+      </div>
+    </div>
+  </div>
+  </div>
+      </main>
     <script type="text/javascript" src="/fe-asana-mini/src/adapters/tasksAdapter.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/adapters/projectsAdapter.js"></script>
     <script type="text/javascript" src="/fe-asana-mini/src/components/tasks.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/projects.js"></script>
     <script type="text/javascript" src="/fe-asana-mini/src/components/task.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/project.js"></script>
     <script type="text/javascript" src="/fe-asana-mini/src/components/app.js"></script>
     <script type="text/javascript" src="/fe-asana-mini/src/index.js"></script>
 </body>
