@@ -1,0 +1,59 @@
+body {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande',
+    sans-serif;
+  font-weight: 300;
+  line-height: 1.6em;
+  font-size: 1.3em;
+}
+
+a {
+  color: #097659;
+}
+
+input {
+  font-size: 1.5em;
+}
+
+.container {
+  width: 960px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.delete-task-link {
+  color: red;
+}
+
+.editable {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.completed_false {
+  border: 1px solid red;
+  padding: 20px;
+}
+
+#tasks-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+}
+
+/**** PAGES ****/
+.page{
+    display: none;
+    width: 100%;
+    min-height: 100%; /* allow for content off the bottom of the page */
+    position: fixed;  /* or absolute if the user needs to scroll for more content */
+    padding: 1rem 2rem;
+}
+
+.active{
+  display: block;
+}

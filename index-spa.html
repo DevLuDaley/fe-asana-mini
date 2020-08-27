@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <main>
+
+      <div class="container">
+    <h1>Task Manager</h1>
+    
+    <div class="page" id="new-task-container">
+      <form id="new-task-form">
+        <input type="text" name="task-body" id="task-note-body">
+        <input type="submit" value="Save task">
+      </form>
+    </div>
+    <div id="task-content">
+      <ul id="tasks-container">
+
+      </ul>
+      <div id="task-show">
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </main>
+
+    <script type="text/javascript" src="/fe-asana-mini/src/adapters/tasksAdapter.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/tasks.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/task.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/app.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/index.js"></script>
+
+</body>
+</html>
