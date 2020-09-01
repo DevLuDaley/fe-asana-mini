@@ -41,7 +41,7 @@ render() {
     ${project.name} - ${project.body} Project ID = ${project.project_id}
     </li>`).join('');
 projectsContainer.innerHTML = projectsString
-    console.log(projectsString)
+    // console.log(projectsString)
 }}
     // console.log(projectsString.length)
     // console.log(typeof(this.projects)) //object
