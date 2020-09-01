@@ -17,6 +17,11 @@ class Task {
   }
 
   renderLi() {
-    return `<li data-id=${this.id}>${this.name}>${this.body}></li>`
+    // return `<li data-id=${this.id}>${this.name}>${this.body}></li>`
+    // return `<li data-id=${this.id}>${this.name}>${this.body}></li>`
+    // return `<li>${this.id}>${this.name}>${this.body}</li>`
+
+    
+    return `<li>Name: ${this.name} => Description: ${this.body} =>  Project ID: ${this.project_id}</li>`
   }
 }
