@@ -39,6 +39,7 @@ const prog = {
         document.querySelector('.active').classList.remove('active');
         document.getElementById(hash).classList.add('active');
         console.log(hash)
+        console.log("hash") // ! clg is not working
         //history.pushState({}, currentPage, `#${currentPage}`);
         // disptch event object from div
         document.getElementById(hash).dispatchEvent(app.show);
