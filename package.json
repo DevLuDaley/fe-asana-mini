@@ -1,0 +1,31 @@
+{
+  "name": "fe-asana-mini",
+  "version": "1.0.0",
+  "description": "frontend of Asana Mini task manager project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevLuDaley/fe-asana-mini.git"
+  },
+  "author": "Lu Daley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevLuDaley/fe-asana-mini/issues"
+  },
+  "homepage": "https://github.com/DevLuDaley/fe-asana-mini#readme",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.4.4",
+    "bootstrap": "^5.0.0-alpha1",
+    "bootstrap-icons": "^1.0.0",
+    "jquery": "^1.9.1",
+    "popper.js": "^1.16.1"
+  }
+}

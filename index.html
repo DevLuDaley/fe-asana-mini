@@ -4,16 +4,25 @@
       <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
   <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles/style.css">
     <title>Task Manager</title>
 </head>
 <body>
     <main>
+                                <!-- ! TASKS -->
       <div class="container page active" id="tasks">
+<div class="row g-5">
+  <div class="col">all</div>
+  <div class="col">in one</div>
+  <div class="col">row</div>
+</div>
+        
         <ul>
             <li><a href="#" data-target="workspaces" class="nav-link">WORKSPACES</a></li>
-            <li><a href="#" data-target="users" class="nav-link">USER</a></li>
+            <li><a href="#" data-target="users" class="nav-link">USERS</a></li>
             <li><a href="#" data-target="projects" class="nav-link">PROJECTS</a></li>
             <li><a href="#" data-target="tasks" class="nav-link">TASKS</a></li>
             <li><a href="#" data-target="subtasks" class="nav-link">SUBTASKS</a></li>
@@ -23,7 +32,18 @@
 
     <div id="new-task-container">
       <form id="new-task-form">
-        <input type="text" name="task-body" id="task-note-body">
+        <input type="text" name="new-task-name" id="new-task-name" placeholder="create a task">
+        <input type="text" name="new-task-body" 
+        id="new-task-body" placeholder="describe your task">
+        
+<!--         
+        <input type="text" name="new-task-user-name" 
+        id="new-task-user-name" placeholder="select a user">
+         -->
+        <input type="number" name="new-task-user-id" 
+        id="new-task-user-id" placeholder="select a user">
+        
+        <input type="number" name="new-task-project-id" id="new-task-project-id" placeholder="select a project">
         <input type="submit" value="save task">
       </form>
     </div>
@@ -35,12 +55,14 @@
 
       </div>
     </div>
+
   </div>
-  </div>
-          <div class="container page " id="projects">
+
+                              <!-- ? PROJECTS -->
+          <div class="container page" id="projects">
         <ul>
             <li><a href="#" data-target="workspaces" class="nav-link">WORKSPACES</a></li>
-            <li><a href="#" data-target="users" class="nav-link">USER</a></li>
+            <li><a href="#" data-target="users" class="nav-link">USERS</a></li>
             <li><a href="#" data-target="projects" class="nav-link">PROJECTS</a></li>
             <li><a href="#" data-target="tasks" class="nav-link">TASKS</a></li>
             <li><a href="#" data-target="subtasks" class="nav-link">SUBTASKS</a></li>
@@ -49,7 +71,7 @@
     <h1>Projects</h1>
     <div id="new-project-container">
       <form id="new-project-form">
-        <input type="text" name="project-body" id="project-note-body">
+        <input type="text" name="project-body" id="new-project-body">
         <input type="submit" value="save project">
       </form>
     </div>
@@ -63,14 +85,136 @@
     </div>
   </div>
   </div>
+                            <!-- ? WORKSPACES -->
+          <div class="container page " id="workspaces">
+        <ul>
+            <li><a href="#" data-target="workspaces" class="nav-link">WORKSPACES</a></li>
+            <li><a href="#" data-target="users" class="nav-link">USERS</a></li>
+            <li><a href="#" data-target="projects" class="nav-link">PROJECTS</a></li>
+            <li><a href="#" data-target="tasks" class="nav-link">TASKS</a></li>
+            <li><a href="#" data-target="subtasks" class="nav-link">SUBTASKS</a></li>
+            <li><a href="#" data-target="notes" class="nav-link">NOTES</a></li>
+        </ul>
+    <h1>Workspaces </h1>
+    <div id="new-workspace-container">
+      <form id="new-workspace-form">
+        <input type="text" name="workspace-body" id="new-workspace-body">
+        <input type="submit" value="save workspace">
+      </form>
+    </div>
+    <div id="workspace-content">
+      <ul id="workspaces-container">
+
+      </ul>
+      <div id="workspace-show">
+
+      </div>
+    </div>
+  </div>
+  </div>
+                          <!-- ? SUBTASKS -->
+          <div class="container page" id="subtasks">
+        <ul>
+            <li><a href="#" data-target="workspaces" class="nav-link">WORKSPACES</a></li>
+            <li><a href="#" data-target="users" class="nav-link">USERS</a></li>
+            <li><a href="#" data-target="projects" class="nav-link">PROJECTS</a></li>
+            <li><a href="#" data-target="tasks" class="nav-link">TASKS</a></li>
+            <li><a href="#" data-target="subtasks" class="nav-link">SUBTASKS</a></li>
+            <li><a href="#" data-target="notes" class="nav-link">NOTES</a></li>
+        </ul>
+    <h1>Subtasks</h1>
+    <div id="new-subtask-container">
+      <form id="new-subtask-form">
+        <input type="text" name="subtask-body" id="new-subtask-body">
+        <input type="submit" value="save subtask">
+      </form>
+    </div>
+    <div id="subtask-content">
+      <ul id="subtasks-container">
+
+      </ul>
+      <div id="subtask-show">
+
+      </div>
+    </div>
+  </div>
+  </div>
+                          <!-- ? NOTES -->
+          <div class="container page" id="notes">
+        <ul>
+            <li><a href="#" data-target="workspaces" class="nav-link">WORKSPACES</a></li>
+            <li><a href="#" data-target="users" class="nav-link">USERS</a></li>
+            <li><a href="#" data-target="projects" class="nav-link">PROJECTS</a></li>
+            <li><a href="#" data-target="tasks" class="nav-link">TASKS</a></li>
+            <li><a href="#" data-target="subtasks" class="nav-link">SUBTASKS</a></li>
+            <li><a href="#" data-target="notes" class="nav-link">NOTES</a></li>
+        </ul>
+    <h1>Notes</h1>
+    <div id="new-note-container">
+      <form id="new-note-form">
+        <input type="text" name="note-body" id="new-note-body">
+        <input type="submit" value="save note">
+      </form>
+    </div>
+    <div id="note-content">
+      <ul id="notes-container">
+      </ul>
+      <div id="note-show">
+      </div>
+    </div>
+  </div>
+  </div>
+                        <!-- ? USERS -->
+           <div class="container page" id="users">
+        <ul>
+            <li><a href="#" data-target="workspaces" class="nav-link">WORKSPACES</a></li>
+            <li><a href="#" data-target="users" class="nav-link">USERS</a></li>
+            <li><a href="#" data-target="projects" class="nav-link">PROJECTS</a></li>
+            <li><a href="#" data-target="tasks" class="nav-link">TASKS</a></li>
+            <li><a href="#" data-target="subtask" class="nav-link">SUBTASKS</a></li>
+            <li><a href="#" data-target="notes" class="nav-link">NOTES</a></li>
+        </ul>
+    <h1>Users</h1>
+    <div id="new-user-container">
+      <form id="new-user-form">
+        <input type="text" name="user-body" id="new-user-body">
+        <input type="submit" value="save user">
+      </form>
+    </div>
+    <div id="user-content">
+      <ul id="users-container">
+
+      </ul>
+      <div id="user-show">
+
+      </div>
+    </div>
+  </div>
+  </div>
       </main>
+     
     <script type="text/javascript" src="/fe-asana-mini/src/adapters/tasksAdapter.js"></script>
     <script type="text/javascript" src="/fe-asana-mini/src/adapters/projectsAdapter.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/adapters/workspacesAdapter.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/adapters/subtasksAdapter.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/adapters/NotesAdapter.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/adapters/UsersAdapter.js"></script>
     <script type="text/javascript" src="/fe-asana-mini/src/components/tasks.js"></script>
     <script type="text/javascript" src="/fe-asana-mini/src/components/projects.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/workspaces.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/subtasks.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/notes.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/users.js"></script>
     <script type="text/javascript" src="/fe-asana-mini/src/components/task.js"></script>
     <script type="text/javascript" src="/fe-asana-mini/src/components/project.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/workspace.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/subtask.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/note.js"></script>
+    <script type="text/javascript" src="/fe-asana-mini/src/components/user.js"></script>
     <script type="text/javascript" src="/fe-asana-mini/src/components/app.js"></script>
     <script type="text/javascript" src="/fe-asana-mini/src/index.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
 </body>
 </html>
